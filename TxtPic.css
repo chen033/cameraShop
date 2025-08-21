@@ -1,0 +1,37 @@
+.title {
+  position: relative;    /* Container is relative */
+  
+}
+
+.log  /* perefect witdth  of th pic */
+ {
+  width: 100vw;            /* 100% of viewport width */
+  height: auto;            /* maintain aspect ratio */
+  object-fit: cover;       /* cover the area nicely */
+  display: block;          /* remove inline gaps */
+  border-radius: 0;        /* optional: remove rounding if full width */ 
+}
+
+.textOverlay, .textOverlay1 {
+  position: absolute;  
+  left: 5%;          /* distance from left as percentage */
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Overlay 1 (top text) */
+.textOverlay {
+  top: 20%;           /* 20% from top of image */
+  font-size: 3vw;     /* responsive font size */
+}
+
+/* Overlay 2 (bottom text) */
+.textOverlay1 {
+  bottom: 55%;        /* 10% from bottom of image */
+  font-size: 1.5vw;   /* responsive font size */
+  background-color:  rgb(233, 199, 3);
+  color: black;
+  padding: 1em;
+  border-radius: 30px;  
+}

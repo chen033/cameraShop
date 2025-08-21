@@ -1,0 +1,185 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    background: #000000;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+.logo
+{
+    color: rgb(233, 199, 3);
+}
+
+.title {
+    background: rgb(0, 0, 0);
+}
+
+.title1 {
+    color: #ffffff;
+    text-align: left;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #000000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 40px;
+}
+
+.navbarLogo {
+    width: -10px;
+    height: 10px;
+    
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a:hover {
+    background: rgba(195, 80, 3, 0.681);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.name-Moto {
+    color: rgb(195, 3, 3);
+    text-align: center;
+    margin-top: 40px;
+}
+
+.log {
+    height: 70vh; /* Maintain aspect ratio */
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+.top {
+     color: rgb(233, 199, 3);
+}
+
+/* Content container with scroll */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 40px;
+}
+
+/* Ensure enough content exists to scroll */
+.content-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.about .head {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:  rgb(233, 199, 3);
+}
+
+
+
+/* Desktop Styles */
+@media screen and (min-width: 1281px) {
+    .name {
+        font-size: 100px;
+    }
+
+    .name-Moto {
+        font-size: 40px;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 641px) and (max-width: 1280px) {
+    .name {
+        font-size: 70px;
+    }
+
+    .name-Moto {
+        font-size: 30px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 20px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 640px) {
+    .name {
+        font-size: 50px;
+    }
+
+    .name-Moto {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .log {
+        height: 50vh;
+    }
+
+    .content-section {
+        padding: 20px 10px;
+    }
+}
