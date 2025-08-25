@@ -53,14 +53,26 @@
 
 /* Testimonials Section */
 .testimonials {
+    margin-top: 30px;
     padding: 60px 20px;
-    background-color: #111;
+    background-color: #5454545c;
     text-align: center;
 }
 .testimonials .head {
     font-weight: bold;
     margin-bottom: 10px;
     color:  rgb(233, 199, 3);
+}
+.testimonial-grid
+{
+        display: flex;
+
+
+}
+.owner
+{
+     color:  rgb(233, 199, 3);
+   
 }
 
 /* Desktop Styles */
