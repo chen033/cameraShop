@@ -9,13 +9,13 @@ body {
     font-family: 'Segoe UI', sans-serif;
     min-height: 100vh;
     position: relative;
-    background: #000000;
+    background: #000;
     padding: 1%;
     display: flex;
     flex-direction: column;
 }
-.logo
-{
+
+.logo {
     color: rgb(233, 199, 3);
 }
 
@@ -31,20 +31,28 @@ body {
     margin-top: 20px;
 }
 
+/* Header & Navbar */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 10px 0;
-    text-align: center;
+    background: #000;
+    width: 100%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background: #000000;
-    text-align: center;
-    /* Make header full width */
-    width: 100vw; /* 100% of viewport width */
-    left: 0;       /* Ensure it sticks to the left edge */
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 .logo {
     color: #e9c703;
@@ -53,10 +61,18 @@ header {
     letter-spacing: 2px;
 }
 
+.log {
+    height: 70px; /* Premium height */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Navigation Links */
 .nav-links {
     display: flex;
     gap: 25px;
     list-style: none;
+    text-align: end;
 }
 
 .nav-links li a {
@@ -67,8 +83,9 @@ header {
     transition: all 0.3s ease;
     border-radius: 6px;
 }
+
 .nav-links li a:hover {
-    background-color: #cfbb0955; 
+    background-color: #cfbb0955;
 }
 
 .nav-links li a.active {
@@ -77,7 +94,7 @@ header {
     font-weight: 600;
 }
 
-
+/* Page Text & Sections */
 .name {
     color: white;
     text-align: center;
@@ -90,6 +107,11 @@ header {
     margin-top: 40px;
 }
 
+.top {
+    color: rgb(233, 199, 3);
+}
+
+/* Log image in page content */
 .log {
     height: 70vh; /* Maintain aspect ratio */
     width: auto;
@@ -97,9 +119,6 @@ header {
     object-position: center;
     display: block;
     margin: 0 auto;
-}
-.top {
-     color: rgb(233, 199, 3);
 }
 
 /* Content container with scroll */
@@ -109,20 +128,41 @@ header {
     padding-bottom: 40px;
 }
 
-/* Ensure enough content exists to scroll */
+/* Sections */
 .content-section {
     min-height: 100vh;
     padding: 40px 20px;
 }
-
+.about
+{
+    background-color: #5454545c;
+}
 .about .head {
+  
     font-weight: bold;
     margin-bottom: 10px;
-    color:  rgb(233, 199, 3);
+    color: rgb(233, 199, 3);
+    padding: 1px;
 }
-
-
-
+.homePics
+{
+     display: flex;
+     flex-wrap: wrap;       /* wrap to next line if screen is small */
+    gap: 15px;             /* space between images */
+    justify-content: center;
+}
+.homePics img {
+    width: 300px;          /* adjust size as needed */
+    height: 380px;         /* keep proportion */
+object-fit: cover;     /* crop to fit nicely */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; /* smooth hover */
+    cursor: pointer;
+}
+.homePics img:hover {
+    transform: scale(1.1);              /* zoom on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* subtle shadow */
+}
 /* Desktop Styles */
 @media screen and (min-width: 1281px) {
     .name {
@@ -149,10 +189,16 @@ header {
         font-size: 30px;
     }
 
-    .nav-links {
+    .navbar {
         flex-direction: column;
-        gap: 1rem;
-        margin-top: 20px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .nav-links a {
@@ -171,10 +217,16 @@ header {
         font-size: 24px;
     }
 
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
     .nav-links {
         flex-direction: column;
-        gap: 0.8rem;
-        margin-top: 15px;
+        width: 100%;
+        gap: 10px;
     }
 
     .nav-links a {
