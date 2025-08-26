@@ -1,22 +1,42 @@
+/* === Existing Style Base from Your First CSS Applied Here === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  background: #000;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Service Section Layout === */
 .service {
-  display: flex; /* two columns: left + right */
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  margin: 20px;
+  margin: 40px 20px;
   color: #e9c703;
 }
 
 .left-column {
   display: flex;
-  flex-direction: column; /* stack hero + fieldsets vertically */
-  flex: 1; /* take remaining space */
+  flex-direction: column;
+  flex: 1;
   gap: 20px;
 }
 
 .fieldset {
   display: flex;
-  flex-direction: column; /* vertical stacking of fieldsets */
+  flex-direction: column;
   gap: 15px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin-left: 30px;
 }
 
@@ -36,10 +56,11 @@
 }
 
 .image-container {
-  flex: 1; /* image takes the right column space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 200px;
 }
 
 .image-container img {
@@ -47,19 +68,22 @@
   height: auto;
   border-radius: 8px;
   margin-top: 40px;
+  object-fit: contain;
+  
 }
+
+/* === Hero Heading === */
 .hero1 h1 {
-    color: #e9c703;
+  color: #e9c703;
+  font-size: 40px;
 }
 
-
-
-
+/* === Services Grid Section === */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .service-card {
@@ -91,12 +115,15 @@
   line-height: 1.5;
 }
 
+/* === Form Container (Matches Your Previous Styles) === */
 .container {
   background-color: #111;
   padding: 30px;
   border-radius: 15px;
   border: 1px solid #e4c00b75;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -147,4 +174,77 @@ p {
   color: #f1c40f;
   margin-left: 15px;
   align-self: center;
+}
+
+/* === Responsive Media Queries (From Your First File) === */
+
+/* Desktop Styles */
+@media screen and (min-width: 1281px) {
+  .hero1 h1 {
+    font-size: 60px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 641px) and (max-width: 1280px) {
+  .service {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero1 h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .fieldset {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .image-container {
+    justify-content: center;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 640px) {
+  .service {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .hero1 h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .fieldset {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .image-container img {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
