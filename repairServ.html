@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flix Studio</title>
+
+    <link rel="stylesheet" href="repairServ.css">
+    <link rel="stylesheet" href="homeBG.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">Flix Studio</div>
+       <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Category</a></li>   
+            <li><a href="tutorial.html">Tutorial</a></li>
+            <li><a href="repairServ.html" class="active">Repair & Service</a></li>
+            <li><a href="contact.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+ <main>
+  <br><br>
+   
+
+<div class="service">
+  <!-- Left Column: Hero + Fieldsets -->
+  <div class="left-column">
+    <div class="hero1">
+      <h1>Professional Camera & Lens Repair</h1>
+      <p class="tagline">Fast. Transparent. Warranty-backed.<br>Keep shooting without the downtime.</p>
+    </div>
+    <div class="fieldset">
+      <fieldset>Certified Technicians </fieldset>
+      <fieldset>Genuine Parts </fieldset>
+      <fieldset>90-Day Repair Warranty </fieldset>
+      <fieldset>Licensed Technicians</fieldset>
+      <fieldset>Certified Pros </fieldset>
+      <fieldset>Factory-Trained Experts</fieldset>
+    </div>
+  </div>
+
+  <!-- Right Column: Image -->
+  <div class="image-container">
+    <img src="repa1.jpg" alt="Tutorial 1">
+  </div>
+</div>
+<!----------------------------------------------------------------------->
+<br><br>
+ <div class="hero1">
+      <h1>Professional Camera & Lens Repair</h1>
+      <p class="tagline">From quick cleans to complex repairs, we've got your gear covered.
+<br>Keep shooting without the downtime.</p>
+    </div>
+    <br>
+    <div class="services-grid">
+  <div class="service-card">
+    <div class="icon">📷</div>
+    <h3>Camera Body Repair</h3>
+    <p>Shutter, buttons, ports, screens, firmware & diagnostics.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="icon">🔘</div>
+    <h3>Lens Repair & Cleaning</h3>
+    <p>Autofocus, zoom rings, element cleaning, fungus treatment.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="icon">⚡</div>
+    <h3>Sensor Cleaning</h3>
+    <p>Professional dry/wet clean for spotless images.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="icon">🔧</div>
+    <h3>Screen & Port Fixes</h3>
+    <p>LCD, HDMI, USB-C, battery compartments, card slots.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="icon">♦️</div>
+    <h3>Firmware & Calibration</h3>
+    <p>Updates, AF tune, IBIS checks, diagnostics reports.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="icon">⏱️</div>
+    <h3>Express Service</h3>
+    <p>Priority queue for urgent shoots & events.</p>
+  </div>
+</div>
+<!----------------------------------------------------------------------->
+<br>
+  <div class="container">
+    <h1>Request a Free Estimate</h1>
+    <p>No commitment. We’ll confirm timeline & cost before any repair.</p>
+    <form id="estimateForm">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="text" id="contact" placeholder="07X XXX XXXX" required />
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="you@example.com" required />
+        <input type="text" id="brand" placeholder="e.g., Canon R6, Sony A7III" required />
+      </div>
+      <div class="form-group">
+        <textarea id="issue" placeholder="Tell us symptoms, error codes, recent drops/water exposure…" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn" onclick="downloadEstimate()">Submit Request</button>
+        <span class="whatsapp">Or WhatsApp us +94 XX XXX XXXX</span>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function downloadEstimate() {
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const email = document.getElementById('email').value;
+      const brand = document.getElementById('brand').value;
+      const issue = document.getElementById('issue').value;
+
+      const content = 
+        `Full Name: ${name}\nContact Number: ${contact}\nEmail: ${email}\nBrand/Model: ${brand}\nIssue: ${issue}`;
+
+      const blob = new Blob([content], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'estimate_request.txt';
+      link.click();
+    }
+  </script>
+<!---------------------------------------->
+ </main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section links">
+            <h3>Our socials</h3>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a><br>
+        </div>
+        <div class="num">
+            <h3> Our Contact</h3>
+            <p>+94 123 231 213</p>
+        </div>
+        <div class="footer-section map">
+            <h3>Our Location</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093715!2d144.9556513153167!3d-37.81732797975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e33!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sau!4v1602749646489!5m2!1sen!2sau"
+              width="100%" height="200" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    <p class="detail">Copyright &copy;2025; Designed by xxxx</p>
+</footer>
+</body>
+</html>
